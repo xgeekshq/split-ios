@@ -4,7 +4,7 @@ import SwiftUI
 struct SPLITApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FloatingTextField(viewModel: FloatingTextFieldViewModel(placeholder: "Placeholder"))
         }
     }
 }

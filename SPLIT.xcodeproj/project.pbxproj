@@ -7,16 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2ADFC4FB29C8B18200CD452B /* SPLITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFC4FA29C8B18200CD452B /* SPLITApp.swift */; };
-		2ADFC4FD29C8B18200CD452B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFC4FC29C8B18200CD452B /* ContentView.swift */; };
+		2ACBA0D129C8C46A0077F9E4 /* FloatingTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D029C8C46A0077F9E4 /* FloatingTextFieldView.swift */; };
+		2ACBA0D329C8CC890077F9E4 /* FloatingTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D229C8CC890077F9E4 /* FloatingTextFieldViewModel.swift */; };
+		2ACBA0D929C8D7FB0077F9E4 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D629C8D7FA0077F9E4 /* DMSans-Regular.ttf */; };
+		2ACBA0DA29C8D7FB0077F9E4 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D729C8D7FA0077F9E4 /* DMSans-Bold.ttf */; };
+		2ACBA0DB29C8D7FB0077F9E4 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D829C8D7FB0077F9E4 /* DMSans-Medium.ttf */; };
+		2ACBA0DD29C8D8410077F9E4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACBA0DC29C8D8410077F9E4 /* Fonts.swift */; };
+		2ADE109929C8B7E800BA699E /* SPLITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADE109729C8B7E800BA699E /* SPLITApp.swift */; };
+		2ADE109D29C8B7F600BA699E /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADE109C29C8B7F600BA699E /* DependencyContainer.swift */; };
 		2ADFC4FF29C8B18300CD452B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFC4FE29C8B18300CD452B /* Assets.xcassets */; };
 		2ADFC50229C8B18300CD452B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFC50129C8B18300CD452B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2ABCB5A929C8B793001E34DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ACBA0D029C8C46A0077F9E4 /* FloatingTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldView.swift; sourceTree = "<group>"; };
+		2ACBA0D229C8CC890077F9E4 /* FloatingTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldViewModel.swift; sourceTree = "<group>"; };
+		2ACBA0D629C8D7FA0077F9E4 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		2ACBA0D729C8D7FA0077F9E4 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		2ACBA0D829C8D7FB0077F9E4 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		2ACBA0DC29C8D8410077F9E4 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		2ADE109729C8B7E800BA699E /* SPLITApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLITApp.swift; sourceTree = "<group>"; };
+		2ADE109C29C8B7F600BA699E /* DependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		2ADFC4F729C8B18200CD452B /* SPLIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPLIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ADFC4FA29C8B18200CD452B /* SPLITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLITApp.swift; sourceTree = "<group>"; };
-		2ADFC4FC29C8B18200CD452B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2ADFC4FE29C8B18300CD452B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ADFC50129C8B18300CD452B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +45,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2ACBA0CE29C8C4540077F9E4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2ACBA0CF29C8C45A0077F9E4 /* FloatingTextField */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2ACBA0CF29C8C45A0077F9E4 /* FloatingTextField */ = {
+			isa = PBXGroup;
+			children = (
+				2ACBA0D029C8C46A0077F9E4 /* FloatingTextFieldView.swift */,
+				2ACBA0D229C8CC890077F9E4 /* FloatingTextFieldViewModel.swift */,
+			);
+			path = FloatingTextField;
+			sourceTree = "<group>";
+		};
+		2ACBA0D429C8D7CF0077F9E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2ACBA0D529C8D7DA0077F9E4 /* Fonts */,
+				2ADFC4FE29C8B18300CD452B /* Assets.xcassets */,
+				2ACBA0DC29C8D8410077F9E4 /* Fonts.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2ACBA0D529C8D7DA0077F9E4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2ACBA0D729C8D7FA0077F9E4 /* DMSans-Bold.ttf */,
+				2ACBA0D829C8D7FB0077F9E4 /* DMSans-Medium.ttf */,
+				2ACBA0D629C8D7FA0077F9E4 /* DMSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2ADE109629C8B7E800BA699E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2ACBA0CE29C8C4540077F9E4 /* Common */,
+				2ADE109729C8B7E800BA699E /* SPLITApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2ADE109B29C8B7F600BA699E /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				2ADE109C29C8B7F600BA699E /* DependencyContainer.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
 		2ADFC4EE29C8B18200CD452B = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +118,10 @@
 		2ADFC4F929C8B18200CD452B /* SPLIT */ = {
 			isa = PBXGroup;
 			children = (
-				2ADFC4FA29C8B18200CD452B /* SPLITApp.swift */,
-				2ADFC4FC29C8B18200CD452B /* ContentView.swift */,
-				2ADFC4FE29C8B18300CD452B /* Assets.xcassets */,
+				2ACBA0D429C8D7CF0077F9E4 /* Resources */,
+				2ADE109629C8B7E800BA699E /* App */,
+				2ADE109B29C8B7F600BA699E /* DependencyInjection */,
+				2ABCB5A929C8B793001E34DE /* Info.plist */,
 				2ADFC50029C8B18300CD452B /* Preview Content */,
 			);
 			path = SPLIT;
@@ -126,8 +194,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ACBA0DB29C8D7FB0077F9E4 /* DMSans-Medium.ttf in Resources */,
+				2ACBA0D929C8D7FB0077F9E4 /* DMSans-Regular.ttf in Resources */,
 				2ADFC50229C8B18300CD452B /* Preview Assets.xcassets in Resources */,
 				2ADFC4FF29C8B18300CD452B /* Assets.xcassets in Resources */,
+				2ACBA0DA29C8D7FB0077F9E4 /* DMSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,8 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ADFC4FD29C8B18200CD452B /* ContentView.swift in Sources */,
-				2ADFC4FB29C8B18200CD452B /* SPLITApp.swift in Sources */,
+				2ADE109D29C8B7F600BA699E /* DependencyContainer.swift in Sources */,
+				2ACBA0DD29C8D8410077F9E4 /* Fonts.swift in Sources */,
+				2ADE109929C8B7E800BA699E /* SPLITApp.swift in Sources */,
+				2ACBA0D129C8C46A0077F9E4 /* FloatingTextFieldView.swift in Sources */,
+				2ACBA0D329C8CC890077F9E4 /* FloatingTextFieldViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,11 +365,11 @@
 				DEVELOPMENT_TEAM = Y5PGGD4YTX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SPLIT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,11 +394,11 @@
 				DEVELOPMENT_TEAM = Y5PGGD4YTX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SPLIT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
