@@ -1,0 +1,76 @@
+custom_rules:
+  comma_space_rule:
+    regex: ",[ ]{2,}| {1,},"
+    message: "Expected no space before ',' and only one space after ',"
+    severity: warning
+disabled_rules: # rule identifiers to exclude from running
+  - switch_case_alignment
+  - comma
+  - nesting
+  - void_function_in_ternary
+opt_in_rules: # some rules are only opt-in
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_first_not_nil
+  - empty_collection_literal
+  - empty_count
+  - empty_string
+  - fallthrough
+  - fatal_error_message
+  - flatmap_over_map_reduce
+  - identical_operands
+  - last_where
+  - literal_expression_end_indentation
+  - multiline_arguments
+  - multiline_parameters_brackets
+  - operator_usage_whitespace
+  - toggle_bool
+  - unused_import
+  - yoda_condition
+  - array_init
+
+  # Find all the available rules by running:
+  # swiftlint rules
+included: # paths to include during linting. `--path` is ignored if present.
+  - ./
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - BhoutTests
+  - BhoutUITests
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+force_cast: warning # implicitly
+force_try:
+  severity: warning # explicitly
+# rules that have both warning and error levels, can set just the warning level
+# implicitly
+line_length: 120
+# they can set both implicitly with an array
+type_body_length:
+  - 400 # warning
+  - 500 # error
+# or they can set both explicitly
+file_length:
+  warning: 400
+  error: 500
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 40
+    error: 50
+  excluded: iPhone # excluded via string
+identifier_name:
+  min_length: # only min_length
+    error: 3 # only error
+  excluded: # excluded via string array
+    - id
+    - URL
+    - GlobalAPIKey
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
