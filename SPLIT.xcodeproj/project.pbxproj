@@ -17,6 +17,9 @@
 		2ADE109D29C8B7F600BA699E /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADE109C29C8B7F600BA699E /* DependencyContainer.swift */; };
 		2ADFC4FF29C8B18300CD452B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFC4FE29C8B18300CD452B /* Assets.xcassets */; };
 		2ADFC50229C8B18300CD452B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFC50129C8B18300CD452B /* Preview Assets.xcassets */; };
+		ED9C723F29C9DD93006872ED /* FloatingTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9C723E29C9DD93006872ED /* FloatingTextFieldStyle.swift */; };
+		ED9C724129C9F955006872ED /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9C724029C9F955006872ED /* Colors.swift */; };
+		ED9C724429CA0BE5006872ED /* Validated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9C724329CA0BE5006872ED /* Validated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		2ADFC4F729C8B18200CD452B /* SPLIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPLIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADFC4FE29C8B18300CD452B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ADFC50129C8B18300CD452B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ED9C723E29C9DD93006872ED /* FloatingTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldStyle.swift; sourceTree = "<group>"; };
+		ED9C724029C9F955006872ED /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		ED9C724329CA0BE5006872ED /* Validated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,7 @@
 		2ACBA0CE29C8C4540077F9E4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				ED9C724229CA0BD6006872ED /* Helpers */,
 				2ACBA0CF29C8C45A0077F9E4 /* FloatingTextField */,
 			);
 			path = Common;
@@ -58,6 +65,7 @@
 			children = (
 				2ACBA0D029C8C46A0077F9E4 /* FloatingTextFieldView.swift */,
 				2ACBA0D229C8CC890077F9E4 /* FloatingTextFieldViewModel.swift */,
+				ED9C723E29C9DD93006872ED /* FloatingTextFieldStyle.swift */,
 			);
 			path = FloatingTextField;
 			sourceTree = "<group>";
@@ -68,6 +76,7 @@
 				2ACBA0D529C8D7DA0077F9E4 /* Fonts */,
 				2ADFC4FE29C8B18300CD452B /* Assets.xcassets */,
 				2ACBA0DC29C8D8410077F9E4 /* Fonts.swift */,
+				ED9C724029C9F955006872ED /* Colors.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -133,6 +142,14 @@
 				2ADFC50129C8B18300CD452B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ED9C724229CA0BD6006872ED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ED9C724329CA0BE5006872ED /* Validated.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +224,8 @@
 /* Begin PBXShellScriptBuildPhase section */
 		2ADFC50829C8B20C00CD452B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -218,7 +236,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint & swiftlint --fix\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
@@ -229,8 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9C724429CA0BE5006872ED /* Validated.swift in Sources */,
 				2ADE109D29C8B7F600BA699E /* DependencyContainer.swift in Sources */,
+				ED9C723F29C9DD93006872ED /* FloatingTextFieldStyle.swift in Sources */,
 				2ACBA0DD29C8D8410077F9E4 /* Fonts.swift in Sources */,
+				ED9C724129C9F955006872ED /* Colors.swift in Sources */,
 				2ADE109929C8B7E800BA699E /* SPLITApp.swift in Sources */,
 				2ACBA0D129C8C46A0077F9E4 /* FloatingTextFieldView.swift in Sources */,
 				2ACBA0D329C8CC890077F9E4 /* FloatingTextFieldViewModel.swift in Sources */,

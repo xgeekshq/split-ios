@@ -1,25 +1,61 @@
 import Foundation
 
-enum FloatingTextFieldState {
-  case initial
-  case valid
-  case error
-  case disabled
-}
-
 class FloatingTextFieldViewModel: ObservableObject {
 
   // MARK: - Properties -
 
-  @Published var text: String = ""
-  var placeholder: String
-  var state: FloatingTextFieldState
+  @Published private(set) var style: FloatingTextFieldStyle = .empty
+  @Published var isDisabled: Bool {
+    didSet { setupFieldStyle() }
+  }
+
+  private(set) var text: String
+  private(set) var placeholder: String
+  private(set) var validate: ((String) -> Validated<Void, String>)?
 
   // MARK: - Lifecycle -
 
-  init(placeholder: String = "", text: String = "", state: FloatingTextFieldState = .initial) {
+  init(placeholder: String = "",
+       text: String = "",
+       isDisabled: Bool = false,
+       validate: ((String) -> Validated<Void, String>)? = nil) {
     self.placeholder = placeholder
-    self.state = state
     self.text = text
+    self.isDisabled = isDisabled
+    self.validate = validate
+
+    setupFieldStyle()
+  }
+
+  private func setupFieldStyle() {
+    switch (isDisabled, text.isEmpty) {
+      case (true, true):
+        style = .emptyAndDisabled
+      case (true, false):
+        style = .baseAndDisabled
+      case (false, true):
+        style = .empty
+      case (false, false):
+        evaluateData()
+    }
+  }
+
+  private func evaluateData() {
+    if let state = validate?(text) {
+      switch state {
+        case .valid:
+          style = .valid
+        case .invalid:
+          style = .error
+      }
+    } else {
+      style = .base
+    }
+  }
+
+
+  func onChange(text: String) {
+    self.text = text
+    setupFieldStyle()
   }
 }
