@@ -14,13 +14,19 @@ struct FloatingTextField: View {
   }
 
   public var body: some View {
-    ZStack {
-      placeholderLabel
-      floatingTextField
+    VStack {
+      ZStack {
+        placeholderLabel
+        floatingTextField
+      }
+      .background(viewModel.style.backgroundColor)
+      .animation(.easeIn(duration: 0.1), value: viewModel.style)
+      .onChange(of: text) { viewModel.onChange(text: $0) }
+      if viewModel.style == .error {
+        errorStackView.animation(.easeIn(duration: 10), value: viewModel.style)
+      }
     }
-    .background(viewModel.style.backgroundColor)
-    .animation(.easeIn(duration: 0.1), value: viewModel.style)
-    .onChange(of: text) { viewModel.onChange(text: $0) }
+
   }
 
   var placeholderLabel: some View {
@@ -34,6 +40,20 @@ struct FloatingTextField: View {
         .transition(.scale)
       Spacer()
     }
+  }
+
+  var errorStackView: some View {
+    HStack {
+      Image(uiImage: Images.Icons.alert)
+        .renderingMode(.template)
+        .resizable()
+        .frame(width: 13.0, height: 13.0)
+        .foregroundColor(Colors.Danger.Base)
+      Text(viewModel.errorMessage)
+        .font(FontConstants.font(for: 12, in: .regular))
+        .foregroundColor(Colors.Danger.Base)
+      Spacer()
+    }.transition(.slide)
   }
 
   var floatingTextField: some View {
@@ -69,7 +89,7 @@ struct FloatingTextField_Previews: PreviewProvider {
       let validated: (String) -> Validated<Void,String> = { text in
         if text.contains("@") { return .valid(())}
 
-        return .invalid([""])
+        return .invalid(["Error"])
       }
 
       let emptyVM = FloatingTextFieldViewModel(placeholder: "Empty", validate: validated)

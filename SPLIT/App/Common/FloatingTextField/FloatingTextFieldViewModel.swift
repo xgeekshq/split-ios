@@ -10,6 +10,7 @@ class FloatingTextFieldViewModel: ObservableObject {
   }
 
   private(set) var text: String
+  private(set) var errorMessage: String = "Error"
   private(set) var placeholder: String
   private(set) var validate: ((String) -> Validated<Void, String>)?
 
@@ -45,7 +46,8 @@ class FloatingTextFieldViewModel: ObservableObject {
       switch state {
         case .valid:
           style = .valid
-        case .invalid:
+        case .invalid(let error):
+          errorMessage = error[0]
           style = .error
       }
     } else {

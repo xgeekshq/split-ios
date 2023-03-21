@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A9C94A029CA23510070D0C2 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C949F29CA23510070D0C2 /* Images.swift */; };
 		2ACBA0D129C8C46A0077F9E4 /* FloatingTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D029C8C46A0077F9E4 /* FloatingTextFieldView.swift */; };
 		2ACBA0D329C8CC890077F9E4 /* FloatingTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D229C8CC890077F9E4 /* FloatingTextFieldViewModel.swift */; };
 		2ACBA0D929C8D7FB0077F9E4 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D629C8D7FA0077F9E4 /* DMSans-Regular.ttf */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A9C949F29CA23510070D0C2 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		2ABCB5A929C8B793001E34DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ACBA0D029C8C46A0077F9E4 /* FloatingTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldView.swift; sourceTree = "<group>"; };
 		2ACBA0D229C8CC890077F9E4 /* FloatingTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldViewModel.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				2ADFC4FE29C8B18300CD452B /* Assets.xcassets */,
 				2ACBA0DC29C8D8410077F9E4 /* Fonts.swift */,
 				ED9C724029C9F955006872ED /* Colors.swift */,
+				2A9C949F29CA23510070D0C2 /* Images.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				2ADE109D29C8B7F600BA699E /* DependencyContainer.swift in Sources */,
 				ED9C723F29C9DD93006872ED /* FloatingTextFieldStyle.swift in Sources */,
 				2ACBA0DD29C8D8410077F9E4 /* Fonts.swift in Sources */,
+				2A9C94A029CA23510070D0C2 /* Images.swift in Sources */,
 				ED9C724129C9F955006872ED /* Colors.swift in Sources */,
 				2ADE109929C8B7E800BA699E /* SPLITApp.swift in Sources */,
 				2ACBA0D129C8C46A0077F9E4 /* FloatingTextFieldView.swift in Sources */,
