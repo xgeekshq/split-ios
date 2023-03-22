@@ -1,91 +1,61 @@
 import Foundation
 import SwiftUI
 
-enum FloatingTextFieldStyle {
-  case empty
-  case base
-  case valid
-  case error
-  case emptyAndDisabled
-  case baseAndDisabled
+struct FloatingTextFieldStyle {
+  let borderColor: Color
+  let shadowColor: Color
+  let backgroundColor: Color
+  let textOffset: CGSize
+  let placeholderOffset: CGSize
+  let placeholderColor: Color = Colors.Primary.Lighter
+  let placeholderFont: Font
+  let textfieldFont: Font = FontConstants.font(for: 16)
+  let borderCornerRadius: CGFloat = 4.0
+  let borderlineWidth: CGFloat = 1.0
+  let shadowlineWidth: CGFloat = 3.0
 }
 
-extension FloatingTextFieldStyle {
-  var borderColor: Color {
-    switch self {
+struct FloatingTextFieldStyleProvider {
+  static func style(for state: FloatingTextFieldState, isDisabled: Bool = false) -> FloatingTextFieldStyle {
+    let backgroundColor = isDisabled ? Colors.Primary.Lightest : .clear
+
+    switch state {
+      case .empty:
+        return FloatingTextFieldStyle(
+          borderColor: Colors.Primary.Lighter,
+          shadowColor: .clear,
+          backgroundColor: backgroundColor,
+          textOffset: CGSize(width: 0, height: 0),
+          placeholderOffset: CGSize(width: 0, height: 0),
+          placeholderFont: FontConstants.font(for: 16)
+        )
+      case .base:
+        return FloatingTextFieldStyle(
+          borderColor: Colors.Primary.Lighter,
+          shadowColor: .clear,
+          backgroundColor: backgroundColor,
+          textOffset: CGSize(width: 0, height: 8),
+          placeholderOffset: CGSize(width: 0, height: -12),
+          placeholderFont: FontConstants.font(for: 14)
+        )
       case .valid:
-        return Colors.Highlight1.Dark
-      case .error:
-        return Colors.Danger.Dark
-      default:
-        return Colors.Primary.Lighter
+        return FloatingTextFieldStyle(
+          borderColor: Colors.Highlight1.Dark,
+          shadowColor: Colors.Highlight1.Lightest,
+          backgroundColor: backgroundColor,
+          textOffset: CGSize(width: 0, height: 8),
+          placeholderOffset: CGSize(width: 0, height: -12),
+          placeholderFont: FontConstants.font(for: 14)
+        )
+      case .invalid:
+      return FloatingTextFieldStyle(
+          borderColor: Colors.Danger.Dark,
+          shadowColor: Colors.Danger.Lightest,
+          backgroundColor: backgroundColor,
+          textOffset: CGSize(width: 0, height: 8)
+          , placeholderOffset: CGSize(width: 0, height: -12),
+          placeholderFont: FontConstants.font(for: 14)
+        )
     }
-  }
-
-  var shadowColor: Color {
-    switch self {
-      case .valid:
-        return Colors.Highlight1.Lightest
-      case .error:
-        return Colors.Danger.Lightest
-      default:
-        return .clear
-    }
-  }
-
-  var backgroundColor: Color {
-    switch self {
-      case .baseAndDisabled, .emptyAndDisabled:
-        return Colors.Primary.Lightest
-      default:
-        return .clear
-    }
-  }
-
-  var textOffset: CGSize {
-    switch self {
-      case .empty, .emptyAndDisabled:
-        return CGSize(width: 0, height: 0)
-      default:
-        return CGSize(width: 0, height: 8)
-    }
-  }
-
-  var placeholderOffset: CGSize {
-    switch self {
-      case .empty, .emptyAndDisabled:
-        return CGSize(width: 0, height: 0)
-      default:
-        return CGSize(width: 0, height: -12)
-    }
-  }
-
-  var placeholderColor: Color {
-    Colors.Primary.Lighter
-  }
-
-  var placeholderFont: Font {
-    switch self {
-      case .empty, .emptyAndDisabled:
-        return FontConstants.font(for: 16)
-      default:
-        return FontConstants.font(for: 14)
-    }
-  }
-
-  var textfieldFont: Font {
-    FontConstants.font(for: 16)
-  }
-
-  var borderCornerRadius: CGFloat {
-    return 4
-  }
-
-  var borderLineWidth: CGFloat {
-    return 1
-  }
-
-  var shadowLineWidth: CGFloat {
-    return 3
   }
 }

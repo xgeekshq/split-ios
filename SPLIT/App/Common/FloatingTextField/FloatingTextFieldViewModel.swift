@@ -1,63 +1,75 @@
 import Foundation
 
+enum ValidateOnChange {
+  case yes((String) -> String?)
+  case no
+}
+
+enum FloatingTextFieldState {
+  case empty
+  case base
+  case valid
+  case invalid
+}
+
 class FloatingTextFieldViewModel: ObservableObject {
 
   // MARK: - Properties -
 
-  @Published private(set) var style: FloatingTextFieldStyle = .empty
+  @Published private(set) var state: FloatingTextFieldState
   @Published var isDisabled: Bool {
-    didSet { setupFieldStyle() }
+    didSet { self.state = text.isEmpty ? .empty : .base }
   }
 
   private(set) var text: String
-  private(set) var errorMessage: String = "Error"
+  private(set) var errorMessage: String = ""
   private(set) var placeholder: String
-  private(set) var validate: ((String) -> Validated<Void, String>)?
+  private(set) var validateOnChange: ValidateOnChange
 
   // MARK: - Lifecycle -
 
   init(placeholder: String = "",
        text: String = "",
        isDisabled: Bool = false,
-       validate: ((String) -> Validated<Void, String>)? = nil) {
+       validateOnChange: ValidateOnChange = .no
+  ) {
     self.placeholder = placeholder
     self.text = text
     self.isDisabled = isDisabled
-    self.validate = validate
+    self.validateOnChange = validateOnChange
 
-    setupFieldStyle()
+    self.state = text.isEmpty ? .empty : .base
   }
 
-  private func setupFieldStyle() {
-    switch (isDisabled, text.isEmpty) {
-      case (true, true):
-        style = .emptyAndDisabled
-      case (true, false):
-        style = .baseAndDisabled
-      case (false, true):
-        style = .empty
-      case (false, false):
-        evaluateData()
-    }
-  }
+  // MARK: - Private -
 
-  private func evaluateData() {
-    if let state = validate?(text) {
-      switch state {
-        case .valid:
-          style = .valid
-        case .invalid(let error):
-          errorMessage = error[0]
-          style = .error
-      }
-    } else {
-      style = .base
-    }
-  }
-
-
-  func onChange(text: String) {
+  private func onChange(text: String) {
     self.text = text
-    setupFieldStyle()
+    switch validateOnChange {
+      case .yes(let validate):
+        if text.isEmpty {
+          state = .empty
+        } else if let errorMessage = validate(text) {
+          self.errorMessage = errorMessage
+          state = .invalid
+        } else {
+          state = .valid
+        }
+      case .no:
+        break
+    }
+  }
+
+  // MARK: - Public -
+
+  func validate(with handler: (String) -> String?) -> Bool {
+    if let errorMessage = handler(text) {
+      self.errorMessage = errorMessage
+      state = .invalid
+      return false
+    } else {
+      state = .valid
+      return true
+    }
   }
 }
