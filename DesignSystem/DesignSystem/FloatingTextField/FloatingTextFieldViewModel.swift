@@ -29,15 +29,14 @@ public class FloatingTextFieldViewModel: ObservableObject {
   // MARK: - Lifecycle -
 
   public init(placeholder: String = "",
-       text: String = "",
-       isDisabled: Bool = false,
-       validateOnChange: ValidateOnChange = .no
+              text: String = "",
+              isDisabled: Bool = false,
+              validateOnChange: ValidateOnChange = .no
   ) {
     self.placeholder = placeholder
     self.text = text
     self.isDisabled = isDisabled
     self.validateOnChange = validateOnChange
-
     self.state = text.isEmpty ? .empty : .base
   }
 
@@ -48,6 +47,7 @@ public class FloatingTextFieldViewModel: ObservableObject {
 
     if text.isEmpty {
       state = .empty
+
       return
     }
 
@@ -68,10 +68,11 @@ public class FloatingTextFieldViewModel: ObservableObject {
     if let errorMessage = handler(text) {
       self.errorMessage = errorMessage
       state = .invalid
+
       return false
-    } else {
-      state = .valid
-      return true
     }
+
+    state = .valid
+    return true
   }
 }

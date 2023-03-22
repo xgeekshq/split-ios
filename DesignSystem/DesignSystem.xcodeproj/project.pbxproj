@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EDBF63C629CB4E5800E53675 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDBF63BD29CB4E5800E53675 /* DesignSystem.framework */; };
-		EDBF63CB29CB4E5800E53675 /* DesignSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF63CA29CB4E5800E53675 /* DesignSystemTests.swift */; };
+		EDBF63CB29CB4E5800E53675 /* FloatingTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF63CA29CB4E5800E53675 /* FloatingTextFieldTests.swift */; };
 		EDBF63CC29CB4E5800E53675 /* DesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = EDBF63C029CB4E5800E53675 /* DesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDBF63E229CB4EE000E53675 /* FloatingTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF63DF29CB4EE000E53675 /* FloatingTextFieldViewModel.swift */; };
 		EDBF63E329CB4EE000E53675 /* FloatingTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF63E029CB4EE000E53675 /* FloatingTextFieldStyle.swift */; };
@@ -37,7 +37,7 @@
 		EDBF63BD29CB4E5800E53675 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBF63C029CB4E5800E53675 /* DesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignSystem.h; sourceTree = "<group>"; };
 		EDBF63C529CB4E5800E53675 /* DesignSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDBF63CA29CB4E5800E53675 /* DesignSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTests.swift; sourceTree = "<group>"; };
+		EDBF63CA29CB4E5800E53675 /* FloatingTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldTests.swift; sourceTree = "<group>"; };
 		EDBF63DF29CB4EE000E53675 /* FloatingTextFieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldViewModel.swift; sourceTree = "<group>"; };
 		EDBF63E029CB4EE000E53675 /* FloatingTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldStyle.swift; sourceTree = "<group>"; };
 		EDBF63E129CB4EE000E53675 /* FloatingTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldView.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		EDBF63C929CB4E5800E53675 /* DesignSystemTests */ = {
 			isa = PBXGroup;
 			children = (
-				EDBF63CA29CB4E5800E53675 /* DesignSystemTests.swift */,
+				EDBF63CA29CB4E5800E53675 /* FloatingTextFieldTests.swift */,
 			);
 			path = DesignSystemTests;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDBF63CB29CB4E5800E53675 /* DesignSystemTests.swift in Sources */,
+				EDBF63CB29CB4E5800E53675 /* FloatingTextFieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
