@@ -1,6 +1,6 @@
 import Foundation
 
-enum ValidateOnChange {
+public enum ValidateOnChange {
   case yes((String) -> String?)
   case no
 }
@@ -12,7 +12,7 @@ enum FloatingTextFieldState {
   case invalid
 }
 
-class FloatingTextFieldViewModel: ObservableObject {
+public class FloatingTextFieldViewModel: ObservableObject {
 
   // MARK: - Properties -
 
@@ -28,7 +28,7 @@ class FloatingTextFieldViewModel: ObservableObject {
 
   // MARK: - Lifecycle -
 
-  init(placeholder: String = "",
+  public init(placeholder: String = "",
        text: String = "",
        isDisabled: Bool = false,
        validateOnChange: ValidateOnChange = .no
@@ -41,26 +41,28 @@ class FloatingTextFieldViewModel: ObservableObject {
     self.state = text.isEmpty ? .empty : .base
   }
 
-  // MARK: - Private -
+  // MARK: - Public -
 
-  private func onChange(text: String) {
+  func onChange(text: String) {
     self.text = text
+
+    if text.isEmpty {
+      state = .empty
+      return
+    }
+
     switch validateOnChange {
       case .yes(let validate):
-        if text.isEmpty {
-          state = .empty
-        } else if let errorMessage = validate(text) {
+        if let errorMessage = validate(text) {
           self.errorMessage = errorMessage
           state = .invalid
         } else {
           state = .valid
         }
       case .no:
-        break
+        state = .base
     }
   }
-
-  // MARK: - Public -
 
   func validate(with handler: (String) -> String?) -> Bool {
     if let errorMessage = handler(text) {

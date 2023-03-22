@@ -4,6 +4,6 @@ import SwiftUI
 struct Images {
 
   struct Icons {
-    static let alert = UIImage(named: "Icon.Alert")!
+    static let alert = Image("icon.alert", bundle: ModuleInfo.bundle)
   }
 }

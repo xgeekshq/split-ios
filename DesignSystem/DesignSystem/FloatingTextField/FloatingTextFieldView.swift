@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-struct FloatingTextField: View {
+public struct FloatingTextField: View {
 
   // MARK: - Properties -
 
@@ -9,7 +9,7 @@ struct FloatingTextField: View {
   @State var style: FloatingTextFieldStyle
   @State var text: String
 
-  init(viewModel: FloatingTextFieldViewModel) {
+  public init(viewModel: FloatingTextFieldViewModel) {
     self.viewModel = viewModel
     self.text = viewModel.text
     self.style = FloatingTextFieldStyleProvider.style(for: viewModel.state, isDisabled: viewModel.isDisabled)
@@ -31,7 +31,7 @@ struct FloatingTextField: View {
       }
   }
 
-  var placeholderLabel: some View {
+  private var placeholderLabel: some View {
     HStack {
       Text(viewModel.placeholder)
         .font(style.placeholderFont)
@@ -44,9 +44,9 @@ struct FloatingTextField: View {
     }
   }
 
-  var errorStackView: some View {
+  private var errorStackView: some View {
     HStack {
-      Image(uiImage: Images.Icons.alert)
+      Images.Icons.alert
         .renderingMode(.template)
         .resizable()
         .frame(width: 13.0, height: 13.0)
@@ -58,7 +58,7 @@ struct FloatingTextField: View {
     }.transition(.slide)
   }
 
-  var floatingTextField: some View {
+  private var floatingTextField: some View {
     TextField("", text: $text)
       .offset(style.textOffset)
       .font(style.textfieldFont)

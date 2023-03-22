@@ -7,39 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A9C94A029CA23510070D0C2 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C949F29CA23510070D0C2 /* Images.swift */; };
-		2ACBA0D129C8C46A0077F9E4 /* FloatingTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D029C8C46A0077F9E4 /* FloatingTextFieldView.swift */; };
-		2ACBA0D329C8CC890077F9E4 /* FloatingTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D229C8CC890077F9E4 /* FloatingTextFieldViewModel.swift */; };
-		2ACBA0D929C8D7FB0077F9E4 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D629C8D7FA0077F9E4 /* DMSans-Regular.ttf */; };
-		2ACBA0DA29C8D7FB0077F9E4 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D729C8D7FA0077F9E4 /* DMSans-Bold.ttf */; };
-		2ACBA0DB29C8D7FB0077F9E4 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ACBA0D829C8D7FB0077F9E4 /* DMSans-Medium.ttf */; };
-		2ACBA0DD29C8D8410077F9E4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACBA0DC29C8D8410077F9E4 /* Fonts.swift */; };
 		2ADE109929C8B7E800BA699E /* SPLITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADE109729C8B7E800BA699E /* SPLITApp.swift */; };
 		2ADE109D29C8B7F600BA699E /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADE109C29C8B7F600BA699E /* DependencyContainer.swift */; };
-		2ADFC4FF29C8B18300CD452B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFC4FE29C8B18300CD452B /* Assets.xcassets */; };
 		2ADFC50229C8B18300CD452B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFC50129C8B18300CD452B /* Preview Assets.xcassets */; };
-		ED9C723F29C9DD93006872ED /* FloatingTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9C723E29C9DD93006872ED /* FloatingTextFieldStyle.swift */; };
-		ED9C724129C9F955006872ED /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9C724029C9F955006872ED /* Colors.swift */; };
 		ED9C724429CA0BE5006872ED /* Validated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9C724329CA0BE5006872ED /* Validated.swift */; };
+		EDDF73BD29CB5BE700D5D6D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDF73BC29CB5BE700D5D6D5 /* Assets.xcassets */; };
+		EDDF73C829CB61D800D5D6D5 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF73C629CB607D00D5D6D5 /* DesignSystem.framework */; };
+		EDDF73C929CB61D800D5D6D5 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF73C629CB607D00D5D6D5 /* DesignSystem.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EDBF63F929CB510D00E53675 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EDDF73C929CB61D800D5D6D5 /* DesignSystem.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2A9C949F29CA23510070D0C2 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		2ABCB5A929C8B793001E34DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2ACBA0D029C8C46A0077F9E4 /* FloatingTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldView.swift; sourceTree = "<group>"; };
-		2ACBA0D229C8CC890077F9E4 /* FloatingTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldViewModel.swift; sourceTree = "<group>"; };
-		2ACBA0D629C8D7FA0077F9E4 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
-		2ACBA0D729C8D7FA0077F9E4 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
-		2ACBA0D829C8D7FB0077F9E4 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
-		2ACBA0DC29C8D8410077F9E4 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		2ADE109729C8B7E800BA699E /* SPLITApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLITApp.swift; sourceTree = "<group>"; };
 		2ADE109C29C8B7F600BA699E /* DependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		2ADFC4F729C8B18200CD452B /* SPLIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPLIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ADFC4FE29C8B18300CD452B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ADFC50129C8B18300CD452B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		ED9C723E29C9DD93006872ED /* FloatingTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldStyle.swift; sourceTree = "<group>"; };
-		ED9C724029C9F955006872ED /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		ED9C724329CA0BE5006872ED /* Validated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validated.swift; sourceTree = "<group>"; };
+		EDDF73BC29CB5BE700D5D6D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDDF73C629CB607D00D5D6D5 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDF73C829CB61D800D5D6D5 /* DesignSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,41 +57,16 @@
 			isa = PBXGroup;
 			children = (
 				ED9C724229CA0BD6006872ED /* Helpers */,
-				2ACBA0CF29C8C45A0077F9E4 /* FloatingTextField */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		2ACBA0CF29C8C45A0077F9E4 /* FloatingTextField */ = {
-			isa = PBXGroup;
-			children = (
-				2ACBA0D029C8C46A0077F9E4 /* FloatingTextFieldView.swift */,
-				2ACBA0D229C8CC890077F9E4 /* FloatingTextFieldViewModel.swift */,
-				ED9C723E29C9DD93006872ED /* FloatingTextFieldStyle.swift */,
-			);
-			path = FloatingTextField;
 			sourceTree = "<group>";
 		};
 		2ACBA0D429C8D7CF0077F9E4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2ACBA0D529C8D7DA0077F9E4 /* Fonts */,
-				2ADFC4FE29C8B18300CD452B /* Assets.xcassets */,
-				2ACBA0DC29C8D8410077F9E4 /* Fonts.swift */,
-				ED9C724029C9F955006872ED /* Colors.swift */,
-				2A9C949F29CA23510070D0C2 /* Images.swift */,
+				EDDF73BC29CB5BE700D5D6D5 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		2ACBA0D529C8D7DA0077F9E4 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				2ACBA0D729C8D7FA0077F9E4 /* DMSans-Bold.ttf */,
-				2ACBA0D829C8D7FB0077F9E4 /* DMSans-Medium.ttf */,
-				2ACBA0D629C8D7FA0077F9E4 /* DMSans-Regular.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		2ADE109629C8B7E800BA699E /* App */ = {
@@ -116,6 +91,7 @@
 			children = (
 				2ADFC4F929C8B18200CD452B /* SPLIT */,
 				2ADFC4F829C8B18200CD452B /* Products */,
+				EDDF73C529CB607D00D5D6D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +131,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		EDDF73C529CB607D00D5D6D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDDF73C629CB607D00D5D6D5 /* DesignSystem.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +150,7 @@
 				2ADFC50829C8B20C00CD452B /* ShellScript */,
 				2ADFC4F429C8B18200CD452B /* Frameworks */,
 				2ADFC4F529C8B18200CD452B /* Resources */,
+				EDBF63F929CB510D00E53675 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,11 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ACBA0DB29C8D7FB0077F9E4 /* DMSans-Medium.ttf in Resources */,
-				2ACBA0D929C8D7FB0077F9E4 /* DMSans-Regular.ttf in Resources */,
+				EDDF73BD29CB5BE700D5D6D5 /* Assets.xcassets in Resources */,
 				2ADFC50229C8B18300CD452B /* Preview Assets.xcassets in Resources */,
-				2ADFC4FF29C8B18300CD452B /* Assets.xcassets in Resources */,
-				2ACBA0DA29C8D7FB0077F9E4 /* DMSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,13 +234,7 @@
 			files = (
 				ED9C724429CA0BE5006872ED /* Validated.swift in Sources */,
 				2ADE109D29C8B7F600BA699E /* DependencyContainer.swift in Sources */,
-				ED9C723F29C9DD93006872ED /* FloatingTextFieldStyle.swift in Sources */,
-				2ACBA0DD29C8D8410077F9E4 /* Fonts.swift in Sources */,
-				2A9C94A029CA23510070D0C2 /* Images.swift in Sources */,
-				ED9C724129C9F955006872ED /* Colors.swift in Sources */,
 				2ADE109929C8B7E800BA699E /* SPLITApp.swift in Sources */,
-				2ACBA0D129C8C46A0077F9E4 /* FloatingTextFieldView.swift in Sources */,
-				2ACBA0D329C8CC890077F9E4 /* FloatingTextFieldViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SPLIT/Preview Content\"";
@@ -392,6 +369,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SPLIT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -413,6 +392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SPLIT/Preview Content\"";
@@ -421,6 +401,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SPLIT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
