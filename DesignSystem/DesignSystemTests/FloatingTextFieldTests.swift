@@ -1,4 +1,5 @@
 import XCTest
+
 @testable import DesignSystem
 
 final class FloatingTextFieldTests: XCTestCase {

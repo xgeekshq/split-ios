@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EDBF63C629CB4E5800E53675 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDBF63BD29CB4E5800E53675 /* DesignSystem.framework */; };
 		EDBF63CB29CB4E5800E53675 /* FloatingTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF63CA29CB4E5800E53675 /* FloatingTextFieldTests.swift */; };
 		EDBF63CC29CB4E5800E53675 /* DesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = EDBF63C029CB4E5800E53675 /* DesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDBF63E229CB4EE000E53675 /* FloatingTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF63DF29CB4EE000E53675 /* FloatingTextFieldViewModel.swift */; };
@@ -63,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDBF63C629CB4E5800E53675 /* DesignSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +165,8 @@
 			dependencies = (
 			);
 			name = DesignSystem;
+			packageProductDependencies = (
+			);
 			productName = DesignSystem;
 			productReference = EDBF63BD29CB4E5800E53675 /* DesignSystem.framework */;
 			productType = "com.apple.product-type.framework";
@@ -217,6 +217,8 @@
 				Base,
 			);
 			mainGroup = EDBF63B329CB4E5800E53675;
+			packageReferences = (
+			);
 			productRefGroup = EDBF63BE29CB4E5800E53675 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
