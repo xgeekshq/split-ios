@@ -78,20 +78,23 @@ public struct FloatingTextField: View {
 
 struct FloatingTextField_Previews: PreviewProvider {
   static var previews: some View {
-    VStack {
       let validated: (String) -> String? = { text in
         if text.contains("@") { return nil}
 
         return "Error"
       }
 
-      let emptyVM = FloatingTextFieldViewModel(placeholder: "Empty",  validateOnChange: .yes(validated))
-      let emptyAndDisabledVM = FloatingTextFieldViewModel(placeholder: "Empty&Disabled", isDisabled: true,  validateOnChange: .yes(validated))
-      let baseVM = FloatingTextFieldViewModel(placeholder: "Base", text: "banana", validateOnChange: .no)
-      let baseAndDisabledVM = FloatingTextFieldViewModel(placeholder: "Base&Disabled", text: "banana", isDisabled: true,  validateOnChange: .yes(validated))
-      let validVM = FloatingTextFieldViewModel(placeholder: "Valid", text: "banana@", validateOnChange: .yes(validated))
-      let invalidVM = FloatingTextFieldViewModel(placeholder: "Invalid", text: "banana", validateOnChange: .yes(validated))
+    let emptyVM = FloatingTextFieldViewModel(placeholder: "Empty",  validateOnChange: .yes(validated))
+    let emptyAndDisabledVM = FloatingTextFieldViewModel(placeholder: "Empty&Disabled", isDisabled: true,  validateOnChange: .yes(validated))
+    let baseVM = FloatingTextFieldViewModel(placeholder: "Base", text: "Test", validateOnChange: .no)
+    let baseAndDisabledVM = FloatingTextFieldViewModel(placeholder: "Base&Disabled", text: "Test", isDisabled: true,  validateOnChange: .yes(validated))
+    let validVM = FloatingTextFieldViewModel(placeholder: "Valid", validateOnChange: .yes(validated))
+    validVM.onChange(text: "Test@test")
+    let invalidVM = FloatingTextFieldViewModel(placeholder: "Invalid", validateOnChange: .yes(validated))
+    invalidVM.onChange(text: "Test")
 
+
+    return VStack {
       FloatingTextField(viewModel: emptyVM)
       FloatingTextField(viewModel: emptyAndDisabledVM)
       FloatingTextField(viewModel: baseVM)

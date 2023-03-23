@@ -12,8 +12,6 @@
 		2ADFC50229C8B18300CD452B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFC50129C8B18300CD452B /* Preview Assets.xcassets */; };
 		ED9C724429CA0BE5006872ED /* Validated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9C724329CA0BE5006872ED /* Validated.swift */; };
 		EDDF73BD29CB5BE700D5D6D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDF73BC29CB5BE700D5D6D5 /* Assets.xcassets */; };
-		EDDF73C829CB61D800D5D6D5 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF73C629CB607D00D5D6D5 /* DesignSystem.framework */; };
-		EDDF73C929CB61D800D5D6D5 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF73C629CB607D00D5D6D5 /* DesignSystem.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +21,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EDDF73C929CB61D800D5D6D5 /* DesignSystem.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +35,6 @@
 		2ADFC50129C8B18300CD452B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED9C724329CA0BE5006872ED /* Validated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validated.swift; sourceTree = "<group>"; };
 		EDDF73BC29CB5BE700D5D6D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EDDF73C629CB607D00D5D6D5 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDDF73C829CB61D800D5D6D5 /* DesignSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +86,6 @@
 			children = (
 				2ADFC4F929C8B18200CD452B /* SPLIT */,
 				2ADFC4F829C8B18200CD452B /* Products */,
-				EDDF73C529CB607D00D5D6D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,14 +123,6 @@
 				ED9C724329CA0BE5006872ED /* Validated.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		EDDF73C529CB607D00D5D6D5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EDDF73C629CB607D00D5D6D5 /* DesignSystem.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

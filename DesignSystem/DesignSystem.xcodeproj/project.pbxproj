@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED50AC5F29CC9EC100D509B2 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = ED50AC5E29CC9EC100D509B2 /* SnapshotTesting */; };
 		EDBF63CB29CB4E5800E53675 /* FloatingTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF63CA29CB4E5800E53675 /* FloatingTextFieldTests.swift */; };
 		EDBF63CC29CB4E5800E53675 /* DesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = EDBF63C029CB4E5800E53675 /* DesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDBF63E229CB4EE000E53675 /* FloatingTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBF63DF29CB4EE000E53675 /* FloatingTextFieldViewModel.swift */; };
@@ -62,12 +63,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED50AC5F29CC9EC100D509B2 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED5BE52129CC9D90002515C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EDBF63B329CB4E5800E53675 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +84,7 @@
 				EDBF63BF29CB4E5800E53675 /* DesignSystem */,
 				EDBF63C929CB4E5800E53675 /* DesignSystemTests */,
 				EDBF63BE29CB4E5800E53675 /* Products */,
+				ED5BE52129CC9D90002515C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +195,9 @@
 				EDBF63C829CB4E5800E53675 /* PBXTargetDependency */,
 			);
 			name = DesignSystemTests;
+			packageProductDependencies = (
+				ED50AC5E29CC9EC100D509B2 /* SnapshotTesting */,
+			);
 			productName = DesignSystemTests;
 			productReference = EDBF63C529CB4E5800E53675 /* DesignSystemTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -218,6 +231,7 @@
 			);
 			mainGroup = EDBF63B329CB4E5800E53675;
 			packageReferences = (
+				EDD4035529CC649400CB9EB8 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = EDBF63BE29CB4E5800E53675 /* Products */;
 			projectDirPath = "";
@@ -417,6 +431,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_ON_DEMAND_RESOURCES = NO;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -449,6 +464,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_ON_DEMAND_RESOURCES = NO;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -532,6 +548,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDD4035529CC649400CB9EB8 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED50AC5E29CC9EC100D509B2 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDD4035529CC649400CB9EB8 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDBF63B429CB4E5800E53675 /* Project object */;
 }

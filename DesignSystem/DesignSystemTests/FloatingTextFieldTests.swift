@@ -1,13 +1,15 @@
 import XCTest
+import SwiftUI
+import SnapshotTesting
 
 @testable import DesignSystem
 
 final class FloatingTextFieldTests: XCTestCase {
   var viewModel: FloatingTextFieldViewModel?
 
-    override func tearDownWithError() throws {
-      viewModel = nil
-    }
+  override func tearDownWithError() throws {
+    viewModel = nil
+  }
 
   func testEmptyFloatingTextFieldState() {
     viewModel = FloatingTextFieldViewModel()
@@ -74,5 +76,12 @@ final class FloatingTextFieldTests: XCTestCase {
     viewModel?.onChange(text: "valid")
     XCTAssertTrue(viewModel!.validate(with: handler))
     XCTAssertEqual(viewModel!.state, .valid)
+  }
+
+  func testFloatingTextFieldView() {
+    assertSnapshot(
+      matching: UIHostingController(rootView: FloatingTextField_Previews.previews),
+      as: .image(on: .iPhone13Pro)
+    )
   }
 }
