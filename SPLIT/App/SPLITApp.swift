@@ -1,10 +1,17 @@
 import SwiftUI
+import DesignSystem
 
 @main
 struct SPLITApp: App {
     var body: some Scene {
         WindowGroup {
-            FloatingTextField(viewModel: FloatingTextFieldViewModel(placeholder: "Placeholder"))
+          create()
         }
     }
+
+  func create() -> some View {
+    let vm = FloatingTextFieldViewModel(placeholder: "Placeholder")
+    let view = FloatingTextField(viewModel: vm)
+    return view
+  }
 }

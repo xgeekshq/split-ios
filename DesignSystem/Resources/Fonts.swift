@@ -17,4 +17,3 @@ struct FontConstants {
     return Font.custom(baseName + "-" + fontWeight.rawValue, size: size)
   }
 }
-
